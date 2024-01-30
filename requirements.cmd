@@ -1,2 +1,2 @@
 @echo on
-pip install colorama & pause
+pip install colorama & pip install pyinstaller & pause
