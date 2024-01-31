@@ -49,6 +49,10 @@ if system() in ("Windows", "Darwin"):
                             direktori_dist_dan_spec = direktori_dist_dan_spec.replace("/", "\\")
                             direktori_sementara = direktori_sementara.replace("/", "\\")
                         perintah = f"pyinstaller --distpath \"{direktori_dist_dan_spec}\" --specpath \"{direktori_dist_dan_spec}\" --workpath \"{direktori_sementara}\" --clean "
+                        if askyesno("Konfirmasi", "Buat dalam satu file?"):
+                            perintah += "--onefile "
+                        else:
+                            perintah += "--onedir "
                         while True:
                             print(f"{Fore.LIGHTBLUE_EX}Tekan Alt + Tab untuk membuka jendela baru{Fore.RESET}")
                             direktori_import = pilih_folder(title = "Pilih direktori import Python [Opsional]")
