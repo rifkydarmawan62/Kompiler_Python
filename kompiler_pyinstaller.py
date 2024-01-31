@@ -60,7 +60,7 @@ if system() in ("Windows", "Darwin"):
                                 if system() == "Windows":
                                     direktori_import = direktori_import.replace("/", "\\")
                                 print(f"{Fore.LIGHTGREEN_EX}{direktori_import}{Fore.RESET}")
-                                perintah += f"--paths \"{direktori_import} "
+                                perintah += f"--paths \"{direktori_import}\" "
                             else:
                                 break
                         if system() in ["Windows", "Darwin"]:
